@@ -1,0 +1,13 @@
+[Unit]
+Description=Monitor Temperature CPU
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/usr/bin/rpi_monitor_temp
+
+[Install]
+WantedBy=multi-user.target

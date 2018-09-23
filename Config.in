@@ -1,0 +1,9 @@
+config BR2_PACKAGE_PRINT_TEMPERATURE
+	bool "Print temperature module"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Kernel module to support rgb led matrix
+	  using incremental encoders.
+
+comment "Print temperature requires RGB led matrix module to be built"
+	depends on !BR2_LINUX_KERNEL
